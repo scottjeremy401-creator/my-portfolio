@@ -1,0 +1,107 @@
+#mycontainer {
+   display: grid;
+   grid-template-areas: 
+   'navbar navbar navbar navbar navbar navbar navbar'
+   'banner banner banner banner banner banner banner'
+   'hobbies hobbies bio bio bio gallery gallery'
+   'skills skills skills skills skills skills skills'
+   'footer footer footer footer footer footer footer'
+   ; 
+}
+#navbar{
+    grid-area: navbar;
+    padding: 10px;
+    margin: 10px;
+}
+.navbar_class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.navbar_class a{
+    text-decoration: none;
+    font-size: 18px;
+    color:black;
+}
+#banner{
+    grid-area: banner;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+#bio{
+    grid-area: bio;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#skills{
+    grid-area: skills;
+    padding: 10px;
+    margin :10px;
+}
+.skill-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+.skill-badges div{
+    background: black;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+#hobbies{
+   grid-area: hobbies;
+   padding: 10px;
+   margin: 10px; 
+}
+#gallery{
+    grid-area: gallery;
+    padding: 10px;
+    margin:10px;
+}
+.gallery-grid{
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+.gallery-grid img{
+     width: 100%;
+     border-radius: 8px;
+}
+#footer{
+    grid-area: footer;
+    padding: 10px;
+    margin: 10px;
+}
+/* MEDIA QUERY */
+@media only screen and (max-width:768px){
+    #mycontainer {
+   display: grid;
+   grid-template-areas: 
+   'navbar navbar navbar navbar navbar navbar navbar'
+   'banner banner banner banner banner banner banner'
+   'bio bio bio bio bio bio bio'
+   'gallery gallery gallery gallery gallery gallery gallery' 
+   'skills skills skills skills skills skills skills'
+   'hobbies hobbies hobbies hobbies hobbies hobbies hobbies' 
+   'footer footer footer footer footer footer footer'
+   ; 
+}
+.navbar_class{
+     flex-direction: column;
+    gap: 14px;
+}
+#banner{
+    margin: 10px 0;
+}
+}
